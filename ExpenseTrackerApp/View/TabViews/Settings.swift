@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct Settings: View {
+    //User Properties
+    @AppStorage("userName") private var userName: String = ""
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            List{
+                Section("User Name"){
+                    TextField("Username", text: $userName)
+                }
+            }
+            .navigationTitle("Settings")
+        }
     }
 }
 
 #Preview {
-    Settings()
+    ContentView()
 }

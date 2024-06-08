@@ -7,12 +7,7 @@
 
 import SwiftUI
 
-struct Category: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    Category()
+enum Category: String, CaseIterable{
+    case income = "Income"
+    case expense = "Expense"
 }

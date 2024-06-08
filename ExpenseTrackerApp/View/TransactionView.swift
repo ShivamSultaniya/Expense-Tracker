@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewExpenseView: View {
+struct TransactionView: View {
     
     //Environment Properties
     @Environment(\.modelContext) private var context
@@ -32,12 +32,12 @@ struct NewExpenseView: View {
                     .hSpacing(.leading)
                 
                 //Preview Transaction Card View
-//                TransactionCardView(transaction: .init(title: title.isEmpty ? "Title":title,
-//                                                       remarks: remarks.isEmpty ? "Remarks":remarks,
-//                                                       amount: amount,
-//                                                       dateAdded: dateAdded,
-//                                                       category: category,
-//                                                       tintColor: tint))
+                TransactionCardView(transaction: .init(title: title.isEmpty ? "Title":title,
+                                                       remarks: remarks.isEmpty ? "Remarks":remarks,
+                                                       amount: amount,
+                                                       dateAdded: dateAdded,
+                                                       category: category,
+                                                       tintColor: tint))
                 
                 CustomSection("Title", "Title", value: $title)
                 CustomSection("Remarks", "Remarks", value: $remarks)
@@ -181,6 +181,6 @@ struct NewExpenseView: View {
 
 #Preview {
     NavigationStack{
-        NewExpenseView()
+        TransactionView()
     }
 }

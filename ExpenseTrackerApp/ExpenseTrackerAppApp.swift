@@ -13,5 +13,6 @@ struct ExpenseTrackerAppApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [Transaction.self])
     }
 }
